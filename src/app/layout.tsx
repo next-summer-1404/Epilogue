@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Vazirmatn } from "next/font/google";
+import Header from "@/components/common/Header/Header";
+import Footer from "@/components/common/Footer/Footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +15,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const vazir = Vazirmatn({
+  subsets: ["latin"],
+  weight: '400',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +33,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <div className="px-8 pt-6">
+        <Header />
+      </div>
+
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={vazir.className}
+
+      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
+      <div className="px-8 pb-8">
+        <Footer />
+      </div>
     </html>
   );
 }
