@@ -28,26 +28,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <div className="px-8 pt-6">
-        <Header />
-      </div>
+    <html>
+      <body className={vazir.className}>
+        <div className="min-h-screen flex flex-col">
+          <header className="px-8 pt-6">
+            <Header />
+          </header>
 
+          <main className="flex-1">
+            {children}
+          </main>
 
-      <body
-        className={vazir.className}
-
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+          <footer className="px-8 pb-8">
+            <Footer />
+          </footer>
+        </div>
       </body>
-      <div className="px-8 pb-8">
-        <Footer />
-      </div>
     </html>
-  );
+  )
 }
+
