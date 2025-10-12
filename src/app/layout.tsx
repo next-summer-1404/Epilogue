@@ -34,8 +34,8 @@ export default function RootLayout({
   return (
     <html>
       <body className={vazir.className}>
-        <div className="min-h-screen flex flex-col">
-          <header className="px-8 pt-6">
+        <div className="min-h-screen flex flex-col ">
+          <header className="px-8 pt-6 ">
             <Header />
           </header>
 
@@ -43,7 +43,7 @@ export default function RootLayout({
             {children}
           </main>
 
-          <footer className="px-8 pb-8">
+          <footer className="px-8 pb-8 pt-[100px]">
             <Footer />
           </footer>
         </div>
