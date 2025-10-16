@@ -41,22 +41,21 @@ export default function FirstSection() {
 
             {/* دسته‌بندی‌ها */}
             <div className="w-full text-center flex flex-col gap-6">
-                <h3 className="text-[16px] md:text-xl font-semibold text-green-400">
+                <h3 className="text-[16px] md:text-xl font-semibold text-[#8CFF45]">
                     دسته‌بندی املاک دلتا
                 </h3>
-                <p className="text-gray-400 text-[32px] ">
+                <p className="text-[#FFFFFF] text-[32px] ">
                     هر ملکی بخوای اینجا پیدا میشه!
                 </p>
-                <p className="text-gray-400 text-[16px] ">
+                <p className=" text-[#FFFFFF] text-[16px] ">
                     با کلیک به روی هر دسته بندی می توانید تمام آگهی مربوط آن را مشاهده کنید و به ملک مورد علاقه خود برسید                </p>
                 <div className="flex flex-wrap justify-center gap-6 mt-8 relative">
                     {categories.map((item, idx) => (
                         <button
                             key={idx}
-                            className={`relative flex flex-col items-start justify-start px-13 py-5 rounded-[14px] text-[18px] font-medium transition bg-[#2a2a2a] text-white hover:bg-[#8CFF45] hover:text-black
+                            className={`relative flex flex-col items-start justify-start px-13.5 py-5 rounded-[14px] text-[18px] font-medium transition bg-[#2a2a2a] text-white hover:bg-[#8CFF45] hover:text-black
                                 }`}
                         >
-                            {/* دایره خاکستری پشت آیکون */}
                             <div className="w-[56px] h-[56px] rounded-2xl bg-[#393939] flex items-center justify-center absolute right-3 -top-8">
                                 <Image
                                     src={item.icon}
@@ -67,7 +66,6 @@ export default function FirstSection() {
                                 />
                             </div>
 
-                            {/* متن زیر آیکون */}
                             <span className=" items-center justify-center text-center">{item.title}</span>
                         </button>
                     ))}
