@@ -10,7 +10,11 @@ const RequestStep = () => {
   };
 
   return (
-    <AuthForm onSubmit={handleSubmit}>
+    <AuthForm 
+      onSubmit={handleSubmit}
+      mode="forgot-password"
+      showSocialButtons={false}
+    >
       <div className="flex flex-col gap-8 w-full max-w-[588px] mb-6">
         <div className="w-full relative">
           <div className="relative">

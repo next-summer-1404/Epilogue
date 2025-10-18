@@ -1,61 +1,77 @@
 'use client'
-import AuthForm from '../../components/AuthForm';
-import { Button, Input } from '@heroui/react';
+
+import AuthForm from '../../components/AuthForm'
+import { Button, Input, Spinner } from '@heroui/react'
+import { useState, ChangeEvent } from 'react'
+import { useRegister } from '../hooks/useRegister'
 
 const EmailStep = () => {
-     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    };
+  const { handleSubmit, isLoading } = useRegister()
+  const [formData, setFormData] = useState({ email: '' })
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    handleSubmit(formData)
+  }
 
   return (
-    <AuthForm onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-8 w-full max-w-[588px] mb-6">
-          <div className="w-full relative">
-            <div className="relative">
-              <label className="absolute -top-2.5 right-3 bg-[#232323] px-2 text-white text-[13px] font-medium leading-none z-10 whitespace-nowrap">
-                ایمیل شما <span className="text-red-500">*</span>
-              </label>
-              <Input 
-                name="email"
-                type="email"
-                required
-                variant="bordered"
-                classNames={{
-                  inputWrapper: [
-                    "w-full max-w-[588px] h-[53px]",
-                    "bg-[#232323]",
-                    "rounded-[16px]",
-                    "border-1 border-[#DDDDDD]",
-                    "shadow-[2px_2px_0px_0px_#363636]",
-                    "hover:bg-[#232323]",
-                    "data-[hover=true]:bg-[#232323]",
-                    "group-data-[focus=true]:bg-[#232323]",
-                    "group-data-[focus=true]:border-[#8CFF45]",
-                    "transition-all"
-                  ].join(" "),
-                  input: [
-                    "text-right pr-4 text-white text-[16px]",
-                    "bg-transparent",
-                    "outline-none",
-                    "placeholder:text-[#AAAAAA]",
-                    "w-full"
-                  ].join(" "),
-                  innerWrapper: "h-full"
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="w-full max-w-[588px] mt-8 mb-8">
-            <Button
-              type="submit" 
-              className="w-full h-[44px] bg-[#8CFF45] text-[#363636] text-[16px] font-medium rounded-[12px] hover:bg-[#7ae63a] hover:scale-[0.98] active:scale-[0.95] transition-all duration-200 shadow-[-1px_-1px_8px_0px_#0000000A_inset,2px_2px_12px_0px_#FFFFFF33_inset,0px_8px_12px_0px_#8CFF4529]"
-            >
-              ارسال کد تایید
-            </Button>
-          </div>
+    <AuthForm onSubmit={onSubmit} mode="register">
+      <div className="flex flex-col gap-8 w-full max-w-[588px] mb-6">
+        <div className="w-full relative">
+          <label className="absolute -top-2.5 right-3 bg-[#232323] px-2 text-white text-[13px] font-medium leading-none z-10 whitespace-nowrap">
+            ایمیل شما <span className="text-red-500">*</span>
+          </label>
+          <Input
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            variant="bordered"
+            classNames={{
+              inputWrapper: [
+                'w-full max-w-[588px] h-[53px]',
+                'bg-[#232323]',
+                'rounded-[16px]',
+                'border border-[#DDDDDD]',
+                'shadow-[2px_2px_0px_0px_#363636]',
+                'hover:bg-[#232323]',
+                'group-data-[focus=true]:border-[#8CFF45]',
+                'transition-all',
+              ].join(' '),
+              input: [
+                'text-center text-white text-[16px]',
+                'bg-transparent outline-none placeholder:text-[#AAAAAA]',
+                'flex items-center justify-center',
+                'leading-[53px]',
+                'p-0',
+              ].join(' '),
+            }}
+          />
         </div>
-      </AuthForm>
+
+        <div className="w-full max-w-[588px] mt-4">
+          <Button
+            type="submit"
+            disabled={isLoading}
+            className="w-full h-[44px] bg-[#8CFF45] text-[#363636] text-[16px] font-medium rounded-[12px] hover:bg-[#7ae63a] transition-all duration-200 flex items-center justify-center gap-2"
+          >
+            {isLoading ? (
+              <>
+                <Spinner color="default" size="sm" /> در حال ارسال...
+              </>
+            ) : (
+              'ارسال کد تأیید'
+            )}
+          </Button>
+        </div>
+      </div>
+    </AuthForm>
   )
 }
 
