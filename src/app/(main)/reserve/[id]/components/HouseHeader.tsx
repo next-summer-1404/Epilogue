@@ -4,7 +4,7 @@ const HouseHeader = () => {
   return (
     <div className="w-full flex flex-col gap-6 lg:translate-y-10 lg:-translate-x-16 px-4 md:px-8 lg:px-16">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start mx-[-90px]">
           <div className="w-[324px] h-[40px] border border-dashed border-gray-500 rounded-md" />
           <div className="w-[622px] h-[20px] border border-dashed border-gray-700 rounded-md mt-2 text-ellipsis whitespace-nowrap overflow-hidden" />
         </div>

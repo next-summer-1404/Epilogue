@@ -18,7 +18,7 @@ const ReserveSidebar = () => {
       <div className="flex flex-col gap-4 w-full items-center">
         <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-center px-4">
           <span className="absolute -top-3 right-4 text-white text-sm px-1 bg-[#393939]">
-            تاریخ رفت
+            :تاریخ رفت
           </span>
           <input
             type="date"
@@ -28,7 +28,7 @@ const ReserveSidebar = () => {
 
         <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-center px-4">
           <span className="absolute -top-3 right-4 text-[#B3B3B3] text-sm px-1 bg-[#393939]">
-            تاریخ برگشت
+            :تاریخ برگشت
           </span>
           <input
             type="date"
@@ -38,7 +38,7 @@ const ReserveSidebar = () => {
 
         <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-between px-4">
           <span className="absolute -top-3 right-4 text-[#B3B3B3] text-sm px-1 bg-[#393939]">
-            تعداد مسافران
+            :تعداد مسافران
           </span>
 
           <div className="flex items-center justify-between w-full">
@@ -73,8 +73,7 @@ const ReserveSidebar = () => {
 
       <div className="w-full max-w-[281px] h-[2px] bg-[#646464]" />
 
-      {/* قیمت‌های رزرو قسمت */}
-      <div className="w-[150px] sm:w-[178px] h-[32px] sm:h-[36px] bg-[#646464] rounded-b-[20px] sm:rounded-b-[24px] flex items-center justify-center mx-auto mt-[-20px]">
+      <div className="w-[150px] sm:w-[178px] h-[32px] sm:h-[36px] bg-[#646464] rounded-b-[20px] sm:rounded-b-[24px] flex items-center justify-center mx-auto mt-[-25px]">
         <p className="text-white text-[15px] sm:text-[16px] font-semibold">
           قیمت‌های رزرو
         </p>
