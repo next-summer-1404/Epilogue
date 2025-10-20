@@ -101,7 +101,7 @@ const LoginPage: FC = () => {
             <div className="w-full text-right mt-1 sm:mt-2">
               <Link
                 href="/forgot-password"
-                className="text-[12px] sm:text-[14px] font-medium text-white hover:text-[#8CFF45] transition-colors hover:underline"
+                className="cursor-pointer text-[12px] sm:text-[14px] font-medium text-white hover:text-[#8CFF45] transition-colors hover:underline"
               >
                 رمز عبور خود را فراموش کردم
               </Link>
@@ -113,7 +113,7 @@ const LoginPage: FC = () => {
           <Button
             type="submit"
             isLoading={isLoading}
-            className="w-full h-[44px] sm:h-[48px] bg-[#8CFF45] text-[#363636] text-[14px] sm:text-[16px] font-medium rounded-[12px] hover:bg-[#7ae63a] hover:scale-[0.98] active:scale-[0.95] transition-all duration-200 shadow-[-1px_-1px_8px_0px_#0000000A_inset,2px_2px_12px_0px_#FFFFFF33_inset,0px_8px_12px_0px_#8CFF4529]"
+            className="cursor-pointer w-full h-[44px] sm:h-[48px] bg-[#8CFF45] text-[#363636] text-[14px] sm:text-[16px] font-medium rounded-[12px] hover:bg-[#7ae63a] hover:scale-[0.98] active:scale-[0.95] transition-all duration-200 shadow-[-1px_-1px_8px_0px_#0000000A_inset,2px_2px_12px_0px_#FFFFFF33_inset,0px_8px_12px_0px_#8CFF4529]"
           >
             ورود به حساب کاربری
           </Button>

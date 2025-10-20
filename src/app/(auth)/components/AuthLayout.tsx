@@ -71,7 +71,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
             <div className="w-full h-10 sm:h-12 rounded-[16px] bg-[#303030] flex mb-4 sm:mb-6 gap-1 p-1">
               <button
                 onClick={handleLoginClick}
-                className={`flex-1 h-full rounded-[12px] text-sm font-medium transition-all ${
+                className={`cursor-pointer flex-1 h-full rounded-[12px] text-sm font-medium transition-all ${
                   mode === "login"
                     ? "bg-[#8CFF45] text-[#363636] shadow-[0_8px_12px_0_#8CFF4529]"
                     : "bg-transparent text-[#AAAAAA] hover:bg-[#404040] hover:text-white"
@@ -81,7 +81,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
               </button>
               <button
                 onClick={handleRegisterClick}
-                className={`flex-1 h-full rounded-[12px] text-sm font-medium transition-all ${
+                className={`cursor-pointer flex-1 h-full rounded-[12px] text-sm font-medium transition-all ${
                   mode === "register"
                     ? "bg-[#8CFF45] text-[#363636] shadow-[0_8px_12px_0_#8CFF4529]"
                     : "bg-transparent text-[#AAAAAA] hover:bg-[#404040] hover:text-white"
@@ -96,16 +96,15 @@ const AuthLayout: FC<AuthLayoutProps> = ({
             <>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-4 sm:mb-6">
                 <button
-                  // onClick={() => handleSocialLogin("google")}
                   disabled={isLoading}
-                  className="w-full sm:w-[278.13px] h-10 sm:h-12 rounded-[16px] border border-[#444] text-white hover:bg-[#8CFF45] hover:text-[#363636]"
+                  className="cursor-pointer w-full sm:w-[278.13px] h-10 sm:h-12 rounded-[16px] border border-[#444] text-white hover:bg-[#8CFF45] hover:text-[#363636]"
                 >
                   ورود با گوگل
                 </button>
                 <button
                   onClick={() => Login()}
                   disabled={isLoading}
-                  className="w-full sm:w-[278.13px] h-10 sm:h-12 rounded-[16px] border border-[#444] text-white hover:bg-[#8CFF45] hover:text-[#363636]"
+                  className="cursor-pointer w-full sm:w-[278.13px] h-10 sm:h-12 rounded-[16px] border border-[#444] text-white hover:bg-[#8CFF45] hover:text-[#363636]"
                 >
                   ورود با گیتهاب
                 </button>
@@ -134,7 +133,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
                   setActiveTab("phone");
                   router.push("/register");
                 }}
-                className={`flex-1 h-full rounded-[12px] text-[14px] font-medium transition-all ${
+                className={`cursor-pointer flex-1 h-full rounded-[12px] text-[14px] font-medium transition-all ${
                   activeTab === "phone"
                     ? "bg-transparent text-[#AAAAAA]"
                     : "bg-transparent text-[#AAAAAA]"
@@ -144,7 +143,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
               </button>
               <button
                 onClick={() => setActiveTab("password")}
-                className={`flex-1 h-full rounded-[12px] text-[14px] font-medium transition-all ${
+                className={`cursor-pointer flex-1 h-full rounded-[12px] text-[14px] font-medium transition-all ${
                   activeTab === "password"
                     ? "bg-white text-[#363636] shadow-[0px_0px_12px_0px_#FFFFFF33]"
                     : "bg-transparent text-[#AAAAAA]"
