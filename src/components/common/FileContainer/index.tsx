@@ -3,7 +3,7 @@ import { FC } from "react";
 import { RadiusSize, ShapeProps } from "./types";
 import Label from "./label";
 import Tag from "./tag";
-import { cn } from "../../../utils/cn";
+import { cn } from "../../../utils/helper/cn";
 
 const FileContainer: FC<ShapeProps> = ({
   children,
