@@ -68,6 +68,7 @@ const HotelFilter = () => {
           placeholder="تومان"
         />
       </div>
+      
     </div>
   )
 }
