@@ -4,9 +4,8 @@ const MapSection = () => {
   const [showMap, setShowMap] = useState(false);
 
   return (
-    <div className="w-full h-[400px] lg:h-full rounded-2xl overflow-hidden s relative cursor-pointer">
+    <div className="w-full h-[400px] lg:h-full rounded-[40px] overflow-hidden s relative cursor-pointer">
       {!showMap ? (
-        // بک‌گراند قبل از کلیک
         <div
           onClick={() => setShowMap(true)}
           className="w-full h-full bg-[#262626] flex items-center justify-center text-white text-2xl "

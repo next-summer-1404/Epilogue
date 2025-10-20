@@ -7,7 +7,7 @@ import HotelSearch from './components/HotelSearch/HotelSearch'
 
 const Page = () => {
     return (
-        <div>
+        <div className='pb-[156px]'>
             <div className="pb-4 px-8">
                 <BreadcrumbsFile />
             </div>
