@@ -4,7 +4,8 @@ import { LoginRequest, LoginResponse } from './login.types';
 export const loginApi = async (data: LoginRequest): Promise<LoginResponse | string> => {
   console.log( 'dataaaaaa', data)
   try {
-    const res = await axiosInstance.post('/auth/login', data);
+    const res = await axiosInstance.post('api/auth/login', data);
+
     if (res.data && res.data.accessToken && res.data.refreshToken) {
       return res.data;
     } else {

@@ -4,8 +4,8 @@ import { logout } from "../common/logout.services";
 import { getItem } from "../common/storage.services";
 
 const axiosInstance = axios.create({
-  baseURL: "https://classapi.sepehracademy.ir/api", // Replace with your API base URL
-  timeout: 1000,
+  baseURL: "https://delta-project.liara.run", // Replace with your API base URL
+  // timeout: 1000,
   headers: { "Content-Type": "application/json" },
 });
 
@@ -30,7 +30,7 @@ axiosInstance.interceptors.response.use(
   function (response) {
     // Do something with the response data
     console.log("Response:", response);
-    return response;
+    return response.data;
   },
   function (error) {
     // Handle the response error
