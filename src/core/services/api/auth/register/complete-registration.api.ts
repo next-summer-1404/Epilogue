@@ -1,8 +1,14 @@
 import axiosInstance from "@/core/services/interceptors"
-import { RegisterRequest3 } from "./register.types"
+import { CompleteRegistrationRequest, CompleteRegistrationResponse } from "./register.types"
 
 
-export const registerApi = async (data : RegisterRequest3) => {
-    const res = await axiosInstance.post('/auth/register')
-    return res.data
+export const CompleteApi = async (data : CompleteRegistrationRequest): Promise<CompleteRegistrationResponse> => {
+    try{
+        const res = await axiosInstance.post('/api/auth/complete-registration', data)
+        return res.data
+    }catch (error) {
+        console.error('registerApi error:', error)
+        throw error;
+    }
+  
 }

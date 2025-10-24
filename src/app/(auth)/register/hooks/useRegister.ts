@@ -11,8 +11,10 @@ export const useRegister = () => {
   const handleSubmit = async (formData: { email: string }) => {
     setIsLoading(true)
     try {
-      await registerApi(formData)
-      router.push('/register/verify-email')
+      const res = await registerApi(formData)
+      const tempUserId = res?.tempUserId
+      if (!tempUserId) return
+      router.push(`/register/verify-email?tempUserId=${tempUserId}`)
     } catch (error) {
       console.error('Register error:', error)
     } finally {
