@@ -1,4 +1,4 @@
-import { User } from "next-auth";
+import { User } from "@/core/types/user.types";
 
 export interface LoginRequest {
   email: string;

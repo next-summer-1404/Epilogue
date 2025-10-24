@@ -100,7 +100,7 @@ const LoginPage: FC = () => {
 
             <div className="w-full text-right mt-1 sm:mt-2">
               <Link
-                href="/forgot-password"
+                href="/forget-password"
                 className="cursor-pointer text-[12px] sm:text-[14px] font-medium text-white hover:text-[#8CFF45] transition-colors hover:underline"
               >
                 رمز عبور خود را فراموش کردم
