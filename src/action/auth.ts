@@ -1,7 +1,7 @@
-"use server";
+// "use server";
 
-import { signIn } from "@/auth";
+// import { signIn } from "@/auth";
 
-export default async function Login() {
-  await signIn("github");
-}
+// export default async function Login() {
+//   await signIn("github");
+// }

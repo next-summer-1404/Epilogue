@@ -4,7 +4,7 @@ import "./globals.css";
 import { Vazirmatn } from "next/font/google";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
-import ClientProviders from "@/components/ClientProviders";
+// import ClientProviders from "@/components/ClientProviders";
 
 
 const geistSans = Geist({
@@ -41,11 +41,11 @@ export default function RootLayout({
             <Header />
           </header>
 
-          <ClientProviders>
+          {/* <ClientProviders> */}
             <main className="flex-1">
               {children}
             </main>
-          </ClientProviders>
+          {/* </ClientProviders> */}
 
           <footer className="px-8 pb-8">
             <Footer />

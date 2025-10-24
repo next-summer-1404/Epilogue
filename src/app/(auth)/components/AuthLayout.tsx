@@ -2,8 +2,8 @@
 
 import { FC, ReactNode, useState } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "@/auth";
-import Login from "@/action/auth";
+// import { signIn } from "@/auth";
+// import Login from "@/action/auth";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -102,7 +102,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
                   ورود با گوگل
                 </button>
                 <button
-                  onClick={() => Login()}
+                  // onClick={() => Login()}
                   disabled={isLoading}
                   className="cursor-pointer w-full sm:w-[278.13px] h-10 sm:h-12 rounded-[16px] border border-[#444] text-white hover:bg-[#8CFF45] hover:text-[#363636]"
                 >
@@ -127,6 +127,8 @@ const AuthLayout: FC<AuthLayoutProps> = ({
       {mode === "login" ? (
         <div className="flex-1 flex items-center justify-center p-4 lg:p-8 w-full lg:h-screen">
           <div className="relative w-full max-w-[691.75px] aspect-[691.75/545] rounded-[28px] border-2 border-[#414141] shadow-[0px_8px_32px_0px_#00000029] bg-gradient-to-br from-[#2A2A2A] to-[#1A1A1A] flex flex-col justify-between items-center overflow-hidden">
+            {/* 
+            🔒 دکمه‌های ورود با شماره و ورود با پسورد به‌درخواست شما کامنت شدند
             <div className="absolute top-6 left-6 flex w-[294px] h-[44px] bg-[#303030] rounded-[16px] p-1 gap-1">
               <button
                 onClick={() => {
@@ -152,6 +154,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({
                 ورود با پسورد
               </button>
             </div>
+            */}
 
             <div className="flex-1 flex items-center justify-center w-full">
               <span className="text-[#AAAAAA] text-[14px]">تصویر اصلی</span>
