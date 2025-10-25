@@ -1,5 +1,6 @@
 import Cookies  from 'js-cookie';
 
+
 export const getAccessToken = () => Cookies.get("accessToken");
 export const setAccessToken = (token: string) =>
   Cookies.set("accessToken", token, { path: "/", secure: true, sameSite: "strict" });
