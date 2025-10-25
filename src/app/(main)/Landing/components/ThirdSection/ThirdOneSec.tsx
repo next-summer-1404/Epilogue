@@ -45,7 +45,7 @@ const ThirdOneSec = () => {
                     </div>
                 </div>
                 <Link
-                    href="/reserv"
+                    href="/mortgage-House"
                     className="flex items-center justify-center text-[14px] md:text-[16px] h-[36px] w-[120px] md:w-[129px] border border-[#FFFFFF] text-[#FFFFFF] rounded-[12px]"
                 >
                     مشاهده همه

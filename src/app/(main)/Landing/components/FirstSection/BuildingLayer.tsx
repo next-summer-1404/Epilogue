@@ -5,8 +5,8 @@ import agha1 from "@/assets/images/LandingImages/agha1.png";
 import agha2 from "@/assets/images/LandingImages/agha2.png";
 import agha3 from "@/assets/images/LandingImages/agha3.png";
 import agha4 from "@/assets/images/LandingImages/agha4.png";
-import { Link } from "@heroui/react";
 import FilterSearch from "./Searchbox/FilterSearch";
+import Link from "next/link";
 
 export default function BuildingLayer() {
     return (
@@ -23,7 +23,7 @@ export default function BuildingLayer() {
 
             {/* نسخه کامل برای دسکتاپ */}
             <div className="hidden md:flex relative w-full flex-col justify-center items-start">
-                
+
                 {/* دیو راست */}
                 <div className="absolute right-0 top-1/3 transform flex flex-col items-center ">
                     <div className="order-2 lg:order-1 flex flex-col gap-15 transform">
@@ -76,12 +76,18 @@ export default function BuildingLayer() {
                     </div>
 
                     {/* دکمه‌ها */}
-                    <div className="flex flex-row gap-6">
-                        <Link className="flex flex-col items-center justify-center text-[16px] h-[36px] w-[129px] text-[#363636] bg-[#FFFFFF] rounded-[12px]">
+                    <div className="flex gap-6">
+                        <Link
+                            href="/houseReserve"
+                            className="flex flex-col  items-center justify-center text-[16px] h-[36px] w-[129px] text-[#363636] bg-[#FFFFFF] rounded-[12px]"
+                        >
                             آسون رزرو کن
                         </Link>
 
-                        <Link className="flex flex-col items-center justify-center text-[16px] h-[36px] w-[152px] text-[#FFFFFF] bg-[#363636] rounded-[12px]">
+                        <Link
+                            href="/mortgage-house"
+                            className="flex flex-col items-center justify-center text-[16px] h-[36px] w-[152px] text-[#FFFFFF] bg-[#363636] rounded-[12px]"
+                        >
                             رهن و اجاره ملک
                         </Link>
                     </div>

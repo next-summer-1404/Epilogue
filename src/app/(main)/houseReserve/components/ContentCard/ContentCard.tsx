@@ -59,12 +59,12 @@ const ContentCard: React.FC<ContentCardProps> = ({ rating, title, addres, time, 
                     {/* بخش قیمت و دکمه */}
                     <div className="flex flex-col gap-10 lg:items-end">
                         <div className='flex gap-3 flex-wrap'>
-                            <p>2500000000 ت</p>
+                            <p>2,500,000,000 ت</p>
                             <div className='w-[54px] h-[28px] bg-[#FF5555] rounded-[8px] flex justify-center items-center'>Off %</div>
                         </div>
-                        <p className='text-[#8CFF45] text-sm'>{price} ت</p>
-                        <div className='w-full lg:w-[175px] h-[44px] flex justify-center items-center bg-[#8CFF45] rounded-[14px]'>
-                            <p className='text-[#363636] text-sm'>بررسی و رزرو هتل</p>
+                        <p className='text-[#8CFF45] text-sm'>{price.toLocaleString()} ت</p>
+                        <div className='w-full lg:w-[175px] h-[44px] flex justify-center items-center border border-[#8CFF45] hover:bg-[#8CFF45] text-[#8CFF45] hover:text-[#363636] rounded-[14px]'>
+                            <p className=' text-sm'>بررسی و رزرو هتل</p>
                         </div>
                     </div>
                 </div>

@@ -10,8 +10,7 @@ const BreadcrumbsFile = () => {
 
   const routes = [
     { name: 'خانه', href: '/' },
-    { name: 'رزرو هتل', href: '/hotelReserve' },
-    { name: 'رزرو رشت', href: '/docs/components/card' },
+    { name: 'رزرو هتل', href: '/houseReserve' },
   ]
 
   return (

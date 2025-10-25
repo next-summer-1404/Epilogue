@@ -73,9 +73,9 @@ export default function MortgageCard({ mortgage }: MortgageCardProps) {
                     {/* ستون راست: قیمت و دکمه */}
                     <div className="flex flex-col items-start md:items-end justify-center gap-2">
                         <span className="text-[#8CFF45] font-semibold text-base md:text-lg">
-                            {mortgage.price.toLocaleString()} تومان
+                            {mortgage.price.toLocaleString()} ت
                         </span>
-                        <button className="w-[154px] h-[44px] text-sm bg-[#8CFF45] text-[#363636] rounded-xl transition-all">
+                        <button className="w-[154px] h-[44px] text-sm border border-[#8CFF45] hover:bg-[#8CFF45] text-[#8CFF45] hover:text-[#363636] rounded-xl transition-all">
                             مشاهده ملک
                         </button>
                     </div>
