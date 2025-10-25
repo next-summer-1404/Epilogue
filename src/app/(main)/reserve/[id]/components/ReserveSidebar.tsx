@@ -7,6 +7,12 @@ const ReserveSidebar = () => {
   const handleIncrement = () => setGuests((prev) => prev + 1)
   const handleDecrement = () => setGuests((prev) => (prev > 0 ? prev - 1 : 0))
 
+  const priceData = [
+    { nights: 5, base: "17.000.000 ت", total: "18.000.000 ت" },
+    { nights: 1, base: "17.000.000 ت", total: "18.000.000 ت" },
+    { nights: 3, base: "17.000.000 ت", total: "18.000.000 ت" },
+  ]
+
   return (
     <aside className="w-full max-w-[329px] bg-[#393939] border border-[#565656] rounded-[32px] flex flex-col items-center p-4 sm:p-6 gap-6 mx-auto lg:mx-0">
       <div className="w-[200px] sm:w-[233px] h-[45px] sm:h-[49px] bg-[#565656] rounded-b-[28px] sm:rounded-b-[32px] flex items-center justify-center -mt-6">
@@ -16,7 +22,7 @@ const ReserveSidebar = () => {
       </div>
 
       <div className="flex flex-col gap-4 w-full items-center">
-        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-center px-4">
+        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] rounded-[16px] flex items-center justify-center px-4">
           <span className="absolute -top-3 right-4 text-white text-sm px-1 bg-[#393939]">
             :تاریخ رفت
           </span>
@@ -26,7 +32,7 @@ const ReserveSidebar = () => {
           />
         </div>
 
-        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-center px-4">
+        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] rounded-[16px] flex items-center justify-center px-4">
           <span className="absolute -top-3 right-4 text-[#B3B3B3] text-sm px-1 bg-[#393939]">
             :تاریخ برگشت
           </span>
@@ -36,7 +42,7 @@ const ReserveSidebar = () => {
           />
         </div>
 
-        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] border border-white rounded-[16px] flex items-center justify-between px-4">
+        <div className="relative w-full max-w-[281px] h-[50px] bg-[#393939] rounded-[16px] flex items-center justify-between px-4">
           <span className="absolute -top-3 right-4 text-[#B3B3B3] text-sm px-1 bg-[#393939]">
             :تعداد مسافران
           </span>
@@ -50,7 +56,7 @@ const ReserveSidebar = () => {
               <button
                 type="button"
                 onClick={handleIncrement}
-                className="w-6 h-6 sm:w-[24px] sm:h-[24px] bg-[#8CFF45] border-2 border-[#363636] rounded-md text-black text-lg flex items-center justify-center cursor-pointer"
+                className="w-6 h-6 sm:w-[24px] sm:h-[24px] bg-[#8CFF45] rounded-md text-black text-lg flex items-center justify-center cursor-pointer"
               >
                 +
               </button>
@@ -62,7 +68,7 @@ const ReserveSidebar = () => {
               <button
                 type="button"
                 onClick={handleDecrement}
-                className="w-6 h-6 sm:w-[24px] sm:h-[24px] bg-[#8CFF45] border-2 border-[#363636] rounded-md text-black text-lg flex items-center justify-center cursor-pointer"
+                className="w-6 h-6 sm:w-[24px] sm:h-[24px] bg-[#8CFF45] rounded-md text-black text-lg flex items-center justify-center cursor-pointer"
               >
                 -
               </button>
@@ -79,18 +85,55 @@ const ReserveSidebar = () => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 w-full items-center">
-        {[...Array(3)].map((_, i) => (
+      <div className="flex flex-col gap-2 w-full items-center mt-4">
+        {priceData.map((item, i) => (
           <div
             key={i}
-            className="w-full max-w-[281px] h-[20px] bg-transparent border border-dashed border-gray-600 rounded-sm"
-          />
+            className="w-full max-w-[281px] flex justify-between rounded-sm p-2 bg-transparent text-white text-sm"
+          >
+            <span>{`${item.nights} شب * ${item.base}`}</span>
+            <span>{item.total}</span>
+          </div>
         ))}
+
+        <div className="w-full max-w-[281px] mt-2 flex flex-col items-end">
+          <div className="flex items-center gap-2">
+            <div className="w-[40px] h-[25px] bg-[#FF5555] rounded-[8px] flex items-center justify-center">
+              <span
+                className="text-white font-bold"
+                style={{
+                  fontFamily: "Peyda",
+                  fontSize: "13px",
+                  lineHeight: "100%",
+                }}
+              >
+                %15
+              </span>
+            </div>
+            <span
+              className="text-[#AAAAAA] font-bold text-[13px] line-through"
+              style={{ fontFamily: "Peyda", lineHeight: "100%" }}
+            >
+              25.000.000 ت
+            </span>
+          </div>
+
+          <div className="w-[123px] h-[30px] flex items-center justify-center mt-1">
+            <span
+              className="text-[#8CFF45] font-bold"
+              style={{
+                fontFamily: "Peyda",
+                fontSize: "15px",
+                lineHeight: "100%",
+              }}
+            >
+              15.000.000 ت
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div className="w-full max-w-[281px] h-[2px] bg-[#646464]" />
-
-      <div className="w-[120px] sm:w-[139px] h-[60px] sm:h-[67px] bg-[#393939] border border-[#565656] rounded-[8px] self-end sm:mr-12" />
+      <div className="w-[120px] sm:w-[139px] h-[60px] sm:h-[67px] bg-[#393939] rounded-[8px] self-end sm:mr-12" />
 
       <button className="w-full max-w-[281px] h-[44px] bg-[#8CFF45] rounded-[14px] text-black font-semibold text-sm sm:text-base shadow-[0px_8px_16px_0px_#8CFF4514,2px_2px_12px_0px_#FFFFFF33_inset,-1px_-1px_4px_0px_#00000014_inset]">
         همین الان رزرو کن
@@ -100,4 +143,3 @@ const ReserveSidebar = () => {
 }
 
 export default ReserveSidebar
-

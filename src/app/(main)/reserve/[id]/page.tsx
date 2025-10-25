@@ -12,7 +12,7 @@ const SingleReserveHouse = () => {
         <HouseHeader />
         <Gallery />
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-10 lg:gap-12 items-start">
-          <div className="flex flex-col gap-8 sm:gap-10">
+          <div className="flex flex-col gap-2 sm:gap-10">
             <HouseDescription />
             <Recommendations />
           </div>

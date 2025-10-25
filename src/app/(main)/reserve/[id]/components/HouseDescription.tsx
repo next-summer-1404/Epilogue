@@ -35,14 +35,14 @@ const HouseDescription = () => {
       <div className="w-full max-w-[1080px] rounded-2xl flex items-start justify-center overflow-hidden px-8 py-6">
         {activeTab === "about" && (
           <div className="flex flex-col gap-6 w-full">
-            <div className="w-[466px] h-[30px] border border-[#8CFF45] rounded-md"></div>
-            <div className="w-[999px] h-[108px] border border-[#AAAAAA] rounded-md"></div>
+            <div className="w-[466px] h-[30px] rounded-md">بهترین سبک طراحی وبسایت در سال 2024 چیست ؟</div>
+            <div className="w-[999px] h-[108px] rounded-md">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است گرها و متون بلکه روزنامه و مجله در ست...لورم ایپسوم متن ساختگی با تولید سادگی نامف...لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است گرها و متون بلکه روزنامه و مجله ست...لورم ایپسوم متن ساختگی با تولید سادگی نامف...لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت.....</div>
             <div className="flex flex-col sm:flex-row justify-between gap-6">
               <div className="w-[445px] h-[391px] rounded-[64px] border border-[#555] shadow-[0px_8px_32px_0px_#00000029]"></div>
               <div className="w-[534px] h-[391px] rounded-[64px] border border-[#555] shadow-[0px_8px_32px_0px_#00000029]"></div>
             </div>
-            <div className="w-[466px] h-[30px] border border-[#8CFF45] rounded-md"></div>
-            <div className="w-[999px] h-[108px] border border-[#AAAAAA] rounded-md"></div>
+            <div className="w-[466px] h-[30px] rounded-md">بهترین سبک طراحی وبسایت در سال 2024 چیست ؟</div>
+            <div className="w-[999px] h-[108px] rounded-md">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است گرها و متون بلکه روزنامه و مجله در ست...لورم ایپسوم متن ساختگی با تولید سادگی نامف...لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است گرها و متون بلکه روزنامه و مجله ست...لورم ایپسوم متن ساختگی با تولید سادگی نامف...لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت.....</div>
           </div>
         )}
 
