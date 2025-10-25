@@ -1,4 +1,4 @@
-import { Cookies } from 'js-cookie';
+import  Cookies  from 'js-cookie';
 
 export const getAccessToken = () => Cookies.get("accessToken");
 export const setAccessToken = (token: string) =>

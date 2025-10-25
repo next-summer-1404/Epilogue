@@ -4,6 +4,7 @@ import "./globals.css";
 import { Vazirmatn } from "next/font/google";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
+// import ClientProviders from "@/components/ClientProviders";
 
 
 const geistSans = Geist({
@@ -36,12 +37,15 @@ export default function RootLayout({
       <body className={vazir.className}>
         <div className="min-h-screen flex flex-col ">
           <header className="px-8 pt-6 ">
+
             <Header />
           </header>
 
-          <main className="flex-1">
-            {children}
-          </main>
+          {/* <ClientProviders> */}
+            <main className="flex-1">
+              {children}
+            </main>
+          {/* </ClientProviders> */}
 
           <footer className="px-8 pb-8 pt-[100px]">
             <Footer />
