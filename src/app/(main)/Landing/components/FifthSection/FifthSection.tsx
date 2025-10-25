@@ -5,14 +5,14 @@ import Link from 'next/link'
 
 const FifthSection = () => {
     const cards = [
-        { id: 1, title: "پیشنهاد ویلا شمال", tag: "4.5", background: "#393939" },
-        { id: 2, title: "پیشنهاد سوئیت تهران", tag: "3", background: "#444444" },
-        { id: 3, title: "پیشنهاد ساحلی کیش", tag: "2", background: "#3B3B3B" },
-        { id: 4, title: "پیشنهاد لاکچری شیراز", tag: "1.5", background: "#404040" },
-        { id: 5, title: "پیشنهاد جنگلی ماسال", tag: "5", background: "#3C3C3C" },
-        { id: 6, title: "پیشنهاد مدرن تهران", tag: "4", background: "#3F3F3F" },
-        { id: 7, title: "پیشنهاد کوهستانی کردستان", tag: "3.5", background: "#414141" },
-        { id: 8, title: "پیشنهاد لوکس قشم", tag: "3", background: "#424242" },
+        { id: 1, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "4.5", background: "#393939" },
+        { id: 2, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "3", background: "#444444" },
+        { id: 3, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "2", background: "#3B3B3B" },
+        { id: 4, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "1.5", background: "#404040" },
+        { id: 5, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "5", background: "#3C3C3C" },
+        { id: 6, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "4", background: "#3F3F3F" },
+        { id: 7, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "3.5", background: "#414141" },
+        { id: 8, title: "اقمتگاه دال در قشم ( 11.000 نفر بازدید کننده )", tag: "3", background: "#424242" },
     ]
     return (
         <div className="w-full px-[37px]  flex flex-col py-[62px] rounded-b-[64px] gap-6 bg-[#2D2D2D]">
@@ -156,17 +156,8 @@ const FifthSection = () => {
                                 <div className="flex flex-col w-full max-w-[306px] py-6 gap-3">
                                     <div className="flex justify-between items-center text-white">
                                         <p className="text-[14px] md:text-[16px] truncate">{card.title}</p>
-                                        <div className="w-[48px] md:w-[54px] h-[28px] md:h-[32px] flex items-center justify-center rounded-[10px] md:bg-[#FF5555]">
-                                            1
-                                        </div>
+                   
                                     </div>
-
-                                    <div className="flex flex-col gap-2 text-white text-[13px] md:text-[14px]">
-                                        <p>گیلان ، رشت</p>
-                                        <p>2 خوابه ، 2 حمامه ، ظرفیت 6 نفر</p>
-                                    </div>
-
-                                    <div className="w-full h-[36px] bg-[#8CFF45] rounded-[12px] mt-2"></div>
                                 </div>
                             </SwiperSlide>
                         ))}

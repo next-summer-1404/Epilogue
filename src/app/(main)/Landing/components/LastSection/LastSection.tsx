@@ -74,9 +74,9 @@ const LastSection = () => {
               </p>
               <div className="flex items-center gap-4 p-4 bg-[#444444] rounded-[24px]">
                 <div className="w-10 h-10 bg-amber-50 rounded-[12px]" />
-                <div className="text-[#AAAAAA]">
-                  <p>اجاره ماهیانه :</p>
-                  <p>۵.۰۰۰.۰۰۰ ت / هر ماه</p>
+                <div className="flex flex-col gap-3 text-[#AAAAAA]">
+                  <p>محمد رضا ساداتی</p>
+                  <p>12 مرداد - 1401 / 12:33</p>
                 </div>
               </div>
             </div>
