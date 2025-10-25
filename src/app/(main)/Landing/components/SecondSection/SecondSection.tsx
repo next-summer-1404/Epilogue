@@ -87,7 +87,7 @@ const SecondSection = () => {
                 <div className="flex justify-between items-center text-white">
                   <p className="text-[14px] md:text-[16px] truncate">{card.title}</p>
                   <div className="w-[48px] md:w-[54px] h-[28px] md:h-[32px] flex items-center justify-center rounded-[10px] md:bg-[#FF5555]">
-                    1
+                    Off%
                   </div>
                 </div>
 
@@ -96,7 +96,13 @@ const SecondSection = () => {
                   <p>2 خوابه ، 2 حمامه ، ظرفیت 6 نفر</p>
                 </div>
 
-                <div className="w-full h-[36px] bg-[#8CFF45] rounded-[12px] mt-2"></div>
+                <div className="w-full  h-[36px] bg-[#444444] cursor-pointer hover:bg-[#8CFF45]  rounded-[12px] mt-2">
+                  <div className='flex gap-4 justify-center items-center text-[#AAAAAA] hover:text-[#444444] text-center text-nowrap text-[14px] py-2'>
+                  <p className=' '>8.000.000 ت</p>
+                  <p className=''>|</p>
+                  <p className=''>5.000.000 ت/ هر شب</p>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}
