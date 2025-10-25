@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState, useEffect, useRef } from "react"
 
 const Gallery = () => {
@@ -29,7 +28,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-10 px-4 lg:pl-8 w-full">
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 lg:gap-10 px-4 lg:pl-8 w-full">
       <div
         className="relative w-full max-w-[1143px] h-[260px] sm:h-[360px] lg:h-[444px] rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] border border-gray-500 overflow-hidden"
         onMouseEnter={stopAutoSlide}
@@ -53,13 +52,13 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-4">
+        <div className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 sm:gap-4">
           {[...Array(totalSlides)].map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => handleDotClick(i)}
-              className={`w-3 h-3 rounded-full border cursor-pointer transition-transform ${
+              className={`w-3 h-3 sm:w-3 sm:h-3 rounded-full border cursor-pointer transition-transform ${
                 currentSlide === i
                   ? "scale-125 bg-[#8CFF45] border-[#8CFF45]"
                   : "border-gray-400 hover:scale-110 bg-transparent"
@@ -68,7 +67,8 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:gap-7">
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-7">
         {[...Array(8)].map((_, i) => {
           const isActive = i === currentSlide
           return (
@@ -90,4 +90,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-
