@@ -3,6 +3,7 @@ import BreadcrumbsFile from '@/app/(main)/mortgage-House/components/BreadCrumbs/
 import React from 'react'
 import MortgageSearch from './components/MortgageSearch/MortgageSearch'
 import Filter from './components/Filter/Filter'
+import MortgageList from './components/Cards/MortgageList'
 
 
 const Page = () => {
@@ -12,8 +13,11 @@ const Page = () => {
                 <BreadcrumbsFile />
             </div>
             <MortgageSearch />
-            
+
             <Filter />
+            <div className="max-w-7xl">
+                <MortgageList />
+            </div>
 
         </div>
 
