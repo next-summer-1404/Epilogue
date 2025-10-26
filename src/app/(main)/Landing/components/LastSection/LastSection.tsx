@@ -3,6 +3,9 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import FileContainer from "../SecondSection/FileContainer";
 import "swiper/css";
+import Image from "next/image";
+import star from "@/assets/images/Star.png";
+
 
 const LastSection = () => {
   const cards = [
@@ -52,8 +55,12 @@ const LastSection = () => {
             background={card.background}
             radius="md"
             size="md"
-            label={card.tag}
-            labelHeight="40px"
+         label={
+                  <div className="flex flex-row-reverse items-center justify-center gap-2">
+                    <Image src={star} alt="icon" className="w-4 h-4" />
+                    <span>{card.tag}</span>
+                  </div>
+                }            labelHeight="40px"
             labelWidth="120px"
             tagHeight="40px"
             width="100%"

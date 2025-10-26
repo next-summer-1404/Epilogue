@@ -2,6 +2,10 @@
 import Badge from './Badge'
 import { Mortgage } from '../../utils/types/mortgage'
 import FileContainer from '../FileContainer'
+import Link from 'next/link'
+import Image from 'next/image'
+import StarS from "@/assets/images/StarS.png";
+
 
 interface MortgageCardProps {
     mortgage: Mortgage
@@ -52,7 +56,8 @@ export default function MortgageCard({ mortgage }: MortgageCardProps) {
                     <div className="flex-1">
                         {mortgage.discount && (
                             <div className="mb-2">
-                                <div className="w-[82px] h-[28px] rounded-[8px] bg-[#7569FF] text-[13px] flex justify-center items-center">
+                                <div className="w-[82px] h-[28px] rounded-[8px] bg-[#7569FF] text-[13px] flex justify-center items-center gap-1">
+                                    <Image src={StarS} alt="تخفیف" width={16} height={16} />
                                     %{mortgage.discount} تخفیف
                                 </div>
                             </div>
@@ -75,9 +80,11 @@ export default function MortgageCard({ mortgage }: MortgageCardProps) {
                         <span className="text-[#8CFF45] font-semibold text-base md:text-lg">
                             {mortgage.price.toLocaleString()} ت
                         </span>
-                        <button className="w-[154px] h-[44px] text-sm border border-[#8CFF45] hover:bg-[#8CFF45] text-[#8CFF45] hover:text-[#363636] rounded-xl transition-all">
-                            مشاهده ملک
-                        </button>
+                        <Link href={"/reserve/1"}>
+                            <button className="w-[154px] h-[44px] cursor-pointer text-sm border border-[#8CFF45] hover:bg-[#8CFF45] text-[#8CFF45] hover:text-[#363636] rounded-xl transition-all">
+                                مشاهده ملک
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

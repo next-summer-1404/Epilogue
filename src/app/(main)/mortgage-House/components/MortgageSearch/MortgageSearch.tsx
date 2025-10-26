@@ -1,5 +1,8 @@
 import { Input, Select, SelectItem } from '@heroui/react'
 import React from 'react'
+import location from "@/assets/images/location.png";
+import Image from 'next/image';
+
 
 export const animals = [
   { key: "cat", label: "Cat" },
@@ -27,6 +30,7 @@ const MortgageSearch = () => {
           <p className="absolute -top-2 right-3 bg-[#303030] z-10 px-2 text-xs text-[#AAAAAA]">
             محل مورد نظر :
           </p>
+
           <Select
             className="border w-full justify-center items-center rounded-2xl text-[#AAAAAA] bg-transparent border-gray-400"
             label="استان ، شهر ...."
@@ -34,6 +38,7 @@ const MortgageSearch = () => {
             style={{ backgroundColor: 'transparent' }}
             size="lg"
           >
+            
             {animals.map((animal) => (
               <SelectItem key={animal.key} className="text-[#AAAAAA] bg-[#262626] py-1 overflow-y-auto">
                 <div className="p-2 text-center hover:bg-[#393939] rounded-2xl">{animal.label}</div>

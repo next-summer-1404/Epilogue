@@ -2,6 +2,8 @@
 import FileContainer from '@/components/common/FileContainer'
 import Image from 'next/image'
 import React from 'react'
+import StarS from "@/assets/images/StarS.png";
+
 
 interface ContentCardProps {
     rating: string
@@ -48,7 +50,8 @@ const ContentCard: React.FC<ContentCardProps> = ({ rating, title, addres, time, 
 
                     {/* بخش اطلاعات اصلی */}
                     <div className="flex flex-col gap-4 flex-1">
-                        <div className='h-[28px] w-[82px] flex rounded-[8px] items-center justify-center bg-[#7569FF]'>
+                        <div className='h-[28px] w-[82px] flex rounded-[8px] items-center justify-center bg-[#7569FF] gap-1'>
+                            <Image src={StarS} alt="ستاره" width={16} height={16} />
                             <p className='text-[13px]'>{rating} ستاره</p>
                         </div>
                         <h2 className="text-lg font-semibold">{title}</h2>

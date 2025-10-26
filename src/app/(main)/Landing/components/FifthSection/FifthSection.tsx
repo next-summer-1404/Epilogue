@@ -2,6 +2,9 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import FileContainer from '../SecondSection/FileContainer'
 import Link from 'next/link'
+import Image from 'next/image'
+import star from "@/assets/images/Star.png";
+
 
 const FifthSection = () => {
     const cards = [
@@ -50,8 +53,12 @@ const FifthSection = () => {
                                 background={card.background}
                                 radius="md"
                                 size="md"
-                                label={card.tag}
-                                labelHeight="40px"
+                                label={
+                                    <div className="flex flex-row-reverse items-center justify-center gap-2">
+                                        <Image src={star} alt="icon" className="w-4 h-4" />
+                                        <span>{card.tag}</span>
+                                    </div>
+                                } labelHeight="40px"
                                 labelWidth="120px"
                                 tagHeight="40px"
                                 width="100%"
@@ -136,8 +143,12 @@ const FifthSection = () => {
                                     background={card.background}
                                     radius="md"
                                     size="md"
-                                    label={card.tag}
-                                    labelHeight="40px"
+         label={
+                  <div className="flex flex-row-reverse items-center justify-center gap-2">
+                    <Image src={star} alt="icon" className="w-4 h-4" />
+                    <span>{card.tag}</span>
+                  </div>
+                }                                    labelHeight="40px"
                                     labelWidth="120px"
                                     tagHeight="40px"
                                     width="100%"
@@ -156,7 +167,7 @@ const FifthSection = () => {
                                 <div className="flex flex-col w-full max-w-[306px] py-6 gap-3">
                                     <div className="flex justify-between items-center text-white">
                                         <p className="text-[14px] md:text-[16px] truncate">{card.title}</p>
-                   
+
                                     </div>
                                 </div>
                             </SwiperSlide>

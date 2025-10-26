@@ -15,9 +15,7 @@ const Page = () => {
             <MortgageSearch />
 
             <Filter />
-            <div className="max-w-7xl">
-                <MortgageList />
-            </div>
+            <MortgageList />
 
         </div>
 

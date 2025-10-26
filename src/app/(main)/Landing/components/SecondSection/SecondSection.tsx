@@ -3,6 +3,9 @@ import FileContainer from './FileContainer'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Link from 'next/link'
+import Image from 'next/image'
+import star from "@/assets/images/Star.png";
+
 
 const SecondSection = () => {
 
@@ -66,7 +69,12 @@ const SecondSection = () => {
                 background={card.background}
                 radius="md"
                 size="md"
-                label={card.tag}
+                label={
+                  <div className="flex flex-row-reverse items-center justify-center gap-2">
+                    <Image src={star} alt="icon" className="w-4 h-4" />
+                    <span>{card.tag}</span>
+                  </div>
+                }
                 labelHeight="40px"
                 labelWidth="120px"
                 tagHeight="40px"
@@ -77,6 +85,7 @@ const SecondSection = () => {
                   wrapperLabel: "py-3 px-4 bg-amber-50",
                 }}
               >
+
                 <div className="flex flex-col gap-4 justify-between h-full">
                   <div className="p-3 py-14 bg-[#444444] rounded-[20px] text-[18px] text-[#8CFF45]"></div>
                 </div>
@@ -98,9 +107,9 @@ const SecondSection = () => {
 
                 <div className="w-full  h-[36px] bg-[#444444] cursor-pointer hover:bg-[#8CFF45]  rounded-[12px] mt-2">
                   <div className='flex gap-4 justify-center items-center text-[#AAAAAA] hover:text-[#444444] text-center text-nowrap text-[14px] py-2'>
-                  <p className=' '>8.000.000 ت</p>
-                  <p className=''>|</p>
-                  <p className=''>5.000.000 ت/ هر شب</p>
+                    <p className=' '>8.000.000 ت</p>
+                    <p className=''>|</p>
+                    <p className=''>5.000.000 ت/ هر شب</p>
                   </div>
                 </div>
               </div>
