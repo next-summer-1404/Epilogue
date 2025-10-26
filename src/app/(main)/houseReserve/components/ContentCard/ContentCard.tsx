@@ -69,7 +69,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ rating, title, addres, time, 
                         <p className='text-[#8CFF45] text-sm'>{price.toLocaleString()} ت</p>
                            <Link href={"/reserve/1"}>
                             <button className="w-[154px] h-[44px] cursor-pointer text-sm border border-[#8CFF45] hover:bg-[#8CFF45] text-[#8CFF45] hover:text-[#363636] rounded-xl transition-all">
-                                مشاهده ملک
+                                بررسی و رزرو هتل
                             </button>
                         </Link>
                     </div>

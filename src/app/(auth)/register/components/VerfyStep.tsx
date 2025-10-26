@@ -80,7 +80,7 @@ const VerifyStep = () => {
       <div className="flex flex-col gap-8 w-full max-w-[588px] mb-6">
         <div className="w-full relative">
           <div className="flex items-center gap-4">
-            <div className="flex gap-2 justify-center flex-1">
+            <div className="flex gap-2 justify-center flex-1" dir='ltr'>
               {code.map((digit, index) => (
                 <Input
                   key={index}
@@ -102,7 +102,7 @@ const VerifyStep = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-2 w-[226px] justify-between bg-[#7569FF] h-[34px] rounded-[12px] px-3 shadow-[inset_-1px_-1px_8px_0px_#0000000A,inset_1px_2px_12px_0px_#FFFFFF33,0px_6px_12px_0px_#376F752E]">
+            {/* <div className="flex items-center gap-2 w-[226px] justify-between bg-[#7569FF] h-[34px] rounded-[12px] px-3 shadow-[inset_-1px_-1px_8px_0px_#0000000A,inset_1px_2px_12px_0px_#FFFFFF33,0px_6px_12px_0px_#376F752E]">
               {timer > 0 ? (
                 <>
                   <span className="text-white text-[13px]">{formatTime(timer)}</span>
@@ -118,7 +118,7 @@ const VerifyStep = () => {
                   {resendLoading ? <Spinner size="sm" color="default" /> : 'ارسال دوباره رمز'}
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
 
           {error && <p className="text-red-500 text-sm mt-2 text-center">{error}</p>}
