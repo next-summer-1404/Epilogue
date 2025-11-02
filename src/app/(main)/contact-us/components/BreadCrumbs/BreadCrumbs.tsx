@@ -1,5 +1,4 @@
 'use client'
-
 import { Breadcrumbs, BreadcrumbItem } from '@heroui/breadcrumbs'
 import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
@@ -7,16 +6,14 @@ import React from 'react'
 const BreadcrumbsFile = () => {
   const pathname = usePathname()
   const router = useRouter()
-
   const routes = [
     { name: 'خانه', href: '/' },
     { name: 'ارتباط با ما', href: '/contact-us' },
   ]
-
   return (
-    <div className="w-full flex pt-[56px] ">
+    <div className="w-full flex pt-14">
       <Breadcrumbs
-        separator={<span className="text-gray-500  px-3">{'>'}</span>}
+        separator={<span className="text-gray-500 px-3">{'>'}</span>}
         className="flex flex-wrap items-center gap-2 text-sm"
       >
         {routes.map((route, index) => {
@@ -26,9 +23,7 @@ const BreadcrumbsFile = () => {
               key={index}
               onClick={() => router.push(route.href)}
               className={`cursor-pointer py-1 transition-colors duration-200 ${
-                isActive
-                  ? 'text-[#8CFF45] '
-                  : 'text-gray-300 hover:text-[#8CFF45]'
+                isActive ? 'text-[#8CFF45]' : 'text-gray-300 hover:text-[#8CFF45]'
               }`}
             >
               {route.name}
