@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <div className="bg-[#363636] px-[6px] text-[#FFFFFF] shadow-[2px] rounded-2xl">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-full mx-auto">
                 <div className="flex justify-between items-center h-12">
 
                     <button className="bg-[#4A4A4A] w-[92px] h-[36px] px-4 py-2 rounded-[12px]"></button>
