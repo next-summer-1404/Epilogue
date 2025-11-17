@@ -3,7 +3,7 @@ export interface HouseRequest {
   limit?: number;
   transactionType?: string[];
   search?: string;
-  order?: "ASC" | "DESC";
+  order?:  "DESC";
   sort?: string;
   propertyType?: string;
   location?: string;

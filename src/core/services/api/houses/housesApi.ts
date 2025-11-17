@@ -7,7 +7,9 @@ export const housesApi = async (params?: HouseRequest) => {
       params: {
         page: params?.page || 1,
         limit: params?.limit || 10,
-        transactionType: `[${(params?.transactionType || ["rental", "mortgage"]).join(", ")}]`,
+        // transactionType: `[${(params?.transactionType || ["rental", "mortgage"]).join(", ")}]`,
+        transactionType: params?.transactionType || ["rental", "mortgage"],
+
         search: params?.search || "",
         order: params?.order || "DESC",
         sort: params?.sort || "last_updated",

@@ -18,7 +18,7 @@ export default function MortgageList() {
           limit: mortgagesPerPage,
           transactionType: ['rental','mortgage'], 
         })
-        console.log("first house:", data?.items[0]);
+        console.log("first house:", data?.houses[0]);
 
 
         const formattedData: Mortgage[] = data?.houses?.map((item: any) => ({
